@@ -47,13 +47,13 @@
     .day-tab.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
     .day-panel { margin-top: 18px; }
     .day-panel[hidden] { display: none; }
-    .day { overflow: hidden; }
+    .day { overflow: hidden; max-width: 100%; }
     .day-head { padding: 20px 22px; background: var(--soft); border-bottom: 1px solid var(--line); text-align: center; }
     .day-head-label { display: block; color: var(--accent); font-size: 13px; font-weight: 900; margin-bottom: 6px; }
     .route-name { font-size: 24px; font-weight: 900; line-height: 1.25; }
-    .timeline-panel { padding: 22px; background: #fff; }
-    .flow-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .flow-card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px 18px; }
+    .timeline-panel { padding: 22px; background: #fff; max-width: 100%; }
+    .flow-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; min-width: 0; }
+    .flow-card { border: 1px solid var(--line); border-radius: 8px; background: #fff; padding: 16px 18px; min-width: 0; max-width: 100%; }
     .time-row {
       display: grid;
       grid-template-columns: minmax(72px, 1fr) auto minmax(72px, 1fr);
@@ -165,6 +165,8 @@
       .stop-name, .route-title {
         font-size: 16px;
         line-height: 1.38;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
       .route-title { margin-bottom: 8px; }
       .roads { column-gap: 6px; row-gap: 6px; }
